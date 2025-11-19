@@ -43,28 +43,26 @@ The goal of the project is to propose **two molecules** with the best inhibitory
 Planned structure of this repository:
 
 bclxl_qsar_md_docking/
+├── README.md # Project overview and workflow description
+├── .gitignore # Python + R ignore rules
 │
-├── README.md                  # Project overview and workflow description
-├── .gitignore                 # Python + R ignore rules
+├── qsar/ # QSAR modeling workflow
+│ ├── notebooks/ # Jupyter notebooks (classification, regression)
+│ ├── src/ # Python/R scripts for descriptor calculation, modeling
+│ ├── results/ # Figures, plots, tables
+│ ├── report/ # QSAR report PDF
+│ └── data/
+│ └── README.md # Instructions for dataset placement (data not included)
 │
-├── qsar/                      # QSAR modeling workflow
-│   ├── notebooks/             # Jupyter notebooks (classification, regression)
-│   ├── src/                   # Python/R scripts for descriptor calculation, modeling
-│   ├── results/               # Figures, plots, tables
-│   ├── report/                # QSAR report PDF
-│   └── data/                  # Dataset folder (not included in repository)
-│       └── README.md          # Instructions for dataset placement
+├── md/ # Molecular Dynamics simulations
+│ ├── input_files/ # Edited PDBs, topology files, MD-ready structures
+│ ├── gromacs_scripts/ # .mdp files for minimization, NVT, NPT, production
+│ ├── analysis/ # RMSD, RMSF, Rg, DSSP, clustering, PCA notebooks/scripts
+│ ├── results/ # Plots from the MD analysis
+│ └── report/ # MD analysis PDF
 │
-├── md/                        # Molecular Dynamics simulations
-│   ├── input_files/           # Edited PDBs, topology files, MD-ready structures
-│   ├── gromacs_scripts/       # .mdp files for minimization, NVT, NPT, production
-│   ├── analysis/              # RMSD, RMSF, Rg, DSSP, clustering, PCA notebooks/scripts
-│   ├── results/               # Plots from the MD analysis
-│   └── report/                # MD analysis PDF
-│
-└── docking/                   # Structure-based docking workflow
-    ├── protocol/              # Receptor preparation, ligand preparation, workflow steps
-    ├── poses/                 # Docking poses, best-ranked structures
-    ├── scoring/               # Vina scores, rescoring scripts/notebooks
-    ├── results/               # Docking plots, binding mode visualizations
-    └── report/                # Docking report
+├── docking/ # Structure-based docking workflow
+│ ├── protocol/ # Receptor preparation, workflow steps
+│ ├── poses/ # Docking poses, best-ranked structures
+│ ├── scoring/ # Vina scores, rescoring scripts/notebooks
+│ └── results/ # Docking plots, binding mode visualizations
