@@ -42,27 +42,30 @@ The goal of the project is to propose **two molecules** with the best inhibitory
 
 Planned structure of this repository:
 
+```
 bclxl_qsar_md_docking/
-├── README.md # Project overview and workflow description
-├── .gitignore # Python + R ignore rules
 │
-├── qsar/ # QSAR modeling workflow
-│ ├── notebooks/ # Jupyter notebooks (classification, regression)
-│ ├── src/ # Python/R scripts for descriptor calculation, modeling
-│ ├── results/ # Figures, plots, tables
-│ ├── report/ # QSAR report PDF
-│ └── data/
-│ └── README.md # Instructions for dataset placement (data not included)
+├── README.md                 # Project overview and workflow description
+├── .gitignore                # Python + R 
 │
-├── md/ # Molecular Dynamics simulations
-│ ├── input_files/ # Edited PDBs, topology files, MD-ready structures
-│ ├── gromacs_scripts/ # .mdp files for minimization, NVT, NPT, production
-│ ├── analysis/ # RMSD, RMSF, Rg, DSSP, clustering, PCA notebooks/scripts
-│ ├── results/ # Plots from the MD analysis
-│ └── report/ # MD analysis PDF
+├── qsar/                     # QSAR modeling workflow
+│   ├── notebooks/            # Jupyter notebooks (classification, regression)
+│   ├── src/                  # Python/R scripts for descriptor calculation and modeling
+│   ├── results/              # Figures, plots, tables
+│   ├── report/               # QSAR report PDF
+│   └── data/                 # Dataset folder 
 │
-├── docking/ # Structure-based docking workflow
-│ ├── protocol/ # Receptor preparation, workflow steps
-│ ├── poses/ # Docking poses, best-ranked structures
-│ ├── scoring/ # Vina scores, rescoring scripts/notebooks
-│ └── results/ # Docking plots, binding mode visualizations
+├── md/                       # Molecular Dynamics simulations
+│   ├── input_files/          # Edited PDBs, topology files, MD-ready structures
+│   ├── gromacs_scripts/      # .mdp files for minimization, NVT, NPT, production
+│   ├── analysis/             # RMSD, RMSF, Rg, DSSP, clustering, PCA scripts/notebooks
+│   ├── results/              # MD plots and trajectory visualizations
+│   └── report/               # MD report PDF
+│
+└── docking/                  # Structure-based docking workflow
+    ├── protocol/             # Receptor and ligand preparation steps
+    ├── poses/                # Docking poses, best-ranked structures
+    ├── scoring/              # Vina scores, rescoring scripts/notebooks
+    ├── results/              # Docking plots, interaction visualizations
+    └── report/               # Docking report PDF
+```
